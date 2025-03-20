@@ -1,0 +1,143 @@
+User-agent: Mediapartners-Google
+Allow: /search
+
+User-agent: Applebot
+Disallow: /plugins/
+Disallow: /ajax/
+Disallow: /album.php
+Disallow: /checkpoint/
+Disallow: /contact_importer/
+Disallow: /dialog/
+Disallow: /fbml/ajax/dialog/
+Disallow: /feeds/
+Disallow: /file_download.php
+Disallow: /job_application/
+Disallow: /l.php
+Disallow: /moments_app/
+Disallow: /p.php
+Disallow: /photos.php
+Disallow: /share.php
+Disallow: /share/
+Disallow: /sharer.php
+Disallow: /sharer/
+Disallow: /ufi/reaction/profile/browser/
+Disallow: /x/oauth/
+
+User-agent: baiduspider
+Disallow: /plugins/
+Disallow: /ajax/
+Disallow: /album.php
+Disallow: /checkpoint/
+Disallow: /contact_importer/
+Disallow: /dialog/
+Disallow: /fbml/ajax/dialog/
+Disallow: /feeds/
+Disallow: /file_download.php
+Disallow: /job_application/
+Disallow: /l.php
+Disallow: /moments_app/
+Disallow: /p.php
+Disallow: /photos.php
+Disallow: /share.php
+Disallow: /share/
+Disallow: /sharer.php
+Disallow: /sharer/
+Disallow: /ufi/reaction/profile/browser/
+Disallow: /x/oauth/
+
+User-agent: Bingbot
+Disallow: /plugins/
+Disallow: /ajax/
+Disallow: /album.php
+Disallow: /checkpoint/
+Disallow: /contact_importer/
+Disallow: /dialog/
+Disallow: /fbml/ajax/dialog/
+Disallow: /feeds/
+Disallow: /file_download.php
+Disallow: /job_application/
+Disallow: /l.php
+Disallow: /moments_app/
+Disallow: /p.php
+Disallow: /photos.php
+Disallow: /share.php
+Disallow: /share/
+Disallow: /sharer.php
+Disallow: /sharer/
+Disallow: /ufi/reaction/profile/browser/
+Disallow: /x/oauth/
+
+User-agent: Googlebot
+Allow: /
+Disallow: /plugins/
+Disallow: /ajax/
+Disallow: /album.php
+Disallow: /checkpoint/
+Disallow: /contact_importer/
+Disallow: /dialog/
+Disallow: /fbml/ajax/dialog/
+Disallow: /feeds/
+Disallow: /file_download.php
+Disallow: /job_application/
+Disallow: /l.php
+Disallow: /moments_app/
+Disallow: /p.php
+Disallow: /photos.php
+Disallow: /share.php
+Disallow: /share/
+Disallow: /sharer.php
+Disallow: /sharer/
+Disallow: /ufi/reaction/profile/browser/
+Disallow: /x/oauth/
+
+User-agent: Googlebot-Image
+Allow: /photos/
+Disallow: /plugins/
+Disallow: /ajax/
+Disallow: /album.php
+Disallow: /checkpoint/
+Disallow: /contact_importer/
+Disallow: /dialog/
+Disallow: /fbml/ajax/dialog/
+Disallow: /feeds/
+Disallow: /file_download.php
+Disallow: /job_application/
+Disallow: /l.php
+Disallow: /moments_app/
+Disallow: /p.php
+Disallow: /photos.php
+Disallow: /share.php
+Disallow: /share/
+Disallow: /sharer.php
+Disallow: /sharer/
+Disallow: /ufi/reaction/profile/browser/
+Disallow: /x/oauth/
+
+User-agent: Facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: Discordbot
+Allow: /
+
+User-agent: Pinterestbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: Yandex
+Allow: /
+
+User-agent: *
+Disallow: /admin/
+Disallow: /checkout/
+Disallow: /cart/
+Disallow: /user/
+
+Sitemap: https://reggaeroots.com.br/sitemap.xml
