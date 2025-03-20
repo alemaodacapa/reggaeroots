@@ -25,7 +25,7 @@
 
 <h3 align="center">Versão: 1.0</h3>
 
-<h2 align="center">📆 Calendário de Agendamento</h2>
+<h2 align="center">📆 Calendário de Agendamento Incluso nesta rádio</h2>
 
 Aqui estão as funcionalidades já implementadas na **Rádio Online**:
 
@@ -54,8 +54,10 @@ $ cd e-painel
 - Crie sua conta de Hospedagem na Hostinger: 'https://hostinger.com.br?REFERRALCODE=1LEONARDO36'
 
 💻 Acesso ao sistema
-- Navegue até a página de login: `https://e-painel.x10.mx/login.php`
-- Utilize as credenciais de operador para acessar o painel.
+- Navegue até a página: `https://reggaeroots.com.br`
+- Utilize nossa Plataforma de músicas para ouvir músicas, já me segue lá no Spotify também: @Reggaeroots.
+- Criei músicas legais com o Donna.ia Indico o Aplicativo ele é muito bom se for criativo e souber usar.
+- Use meu código de convite se for instalar ele na play Store: [U6F6B] Olink dele para baixar: https://app.musicdonna.com/K3i8qyRP
 ```
 
 <p align="center">
