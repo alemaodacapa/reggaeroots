@@ -19,7 +19,7 @@
       <td align="center"><a href="https://app.musicdonna.com/K3i8qyRP"><img style="border-radius: 50%;" src="" alt="Donna Code [U6F6B]"/><br /><sub><b>Donna AI</b></sub></a><br /></td>
   </table>
 <br>
-<a class="button button-lg button-primary fadeinup animated" href="https://app.musicdonna.com/K3i8qyRP" data-caption-animate="fadeinup" data-caption-delay="450">baixe app</a>
+[🟠 **BAIXE O APP**](https://app.musicdonna.com/K3i8qyRP)
 
 <p align="center">
   <a href="https://reggaeroots.com.br/index.php">Início</a> •
