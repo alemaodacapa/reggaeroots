@@ -1,0 +1,56 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "app_name": "radio",
+      "package_name": "com.reggaeroots.radio",
+      "sha256_cert_fingerprints": [
+        "OE:AA:72:G6:7E:5G:97:AB:OO:OO:OO:C5:3C:OO:OO:OO:OO:OO:OO:OO"
+      ]
+    }
+  },
+  {
+    "project": {
+      "android": {
+        "start_time": "2025-03-16 10:17:47am",
+        "status": "Android: Start",
+        "preparing_project_time": "2025-03-16 10:17:47am",
+        "splash_screen": {
+          "color": "#ffffff - #1a1a1a",
+          "font": "Lato",
+          "text": "Loading - Made At - Dev>ops"
+        },
+        "preparation_done": {
+          "time": "0.031583070755005 Seconds"
+        },
+        "icon_creation_time": "0.45840120315552 Seconds",
+        "user_details": {
+          "user_id": 361101,
+          "app_id": 650283,
+          "app_key": "yourapikey",
+          "app_name": "radio",
+          "app_alias": "radio",
+          "app_author_name": "My Company",
+          "app_author_organizational": "My Company",
+          "app_author_organization": "My Company",
+          "app_author_locality": "My Company",
+          "app_author_state": "Sao Paulo",
+          "app_author_country": "Brazil",
+          "app_password": "password",
+          "app_versionName": "1.0",
+          "app_versionCode": 100,
+          "key_source": "Create New",
+          "feature_android": 1,
+          "feature_ios": 0,
+          "admob": 0
+        },
+        "permissions": "Set dir permission",
+        "keystore_generation": "Generate keystore OK",
+        "keytool_command": "keytool -genkey -v -keystore 650283/my-release-key.jks -keyalg RSA -keysize 2048 -validity 10000 -alias \"radio\" -storepass \"sdfasdfsadfsadf\" -keypass \"asdfsadfasdf\" -dname \"CN=My Company, OU=My Company, O=My Company, L=My Company, S=Sao Paulo, C=Brazil\"",
+        "keystore_generation_time": "1.3004641532898 Seconds",
+        "apk_build_time": "10.529654979706 Seconds",
+        "app_bundle_build_time": "10.529654979706 Seconds"
+      }
+    }
+  }
+]
