@@ -50,7 +50,7 @@ $ cd e-painel
 💻 Configuração do servidor
 - Suba o projeto em um servidor PHP, como Apache ou Nginx.
 - Configure o arquivo `conexao.php` com as credenciais do seu banco de dados.
-- Acesse o sistema através do seu navegador em: `https://e-painel.x10.mx/login.php'
+- Acesse o sistema através do seu navegador em: `https://reggaeroots.com.br/agendaonline.html'
 - Crie sua conta de Hospedagem na Hostinger: 'https://hostinger.com.br?REFERRALCODE=1LEONARDO36'
 
 💻 Acesso ao sistema
