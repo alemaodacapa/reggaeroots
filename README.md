@@ -6,8 +6,8 @@
 
 <h1 align="center">Rádio Reggaeroots (BETA)</h1>
 <p align="center">
-  <img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/m/your-username/e-painel">
-  <img alt="Latest version" src="https://img.shields.io/github/v/release/your-username/e-painel.svg" alt="Latest version">
+  <img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/m/alemaodacapa/reggaeroots">
+  <img alt="Latest version" src="https://img.shields.io/github/v/release/alemaodacapa/e-painel.svg" alt="Latest version">
 </p>
 
 <p align="center">
