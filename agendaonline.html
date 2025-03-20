@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/calendario.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Agenda Online</title>
+<style>
+/* Adicionando espaçamento no topo e no final da página */
+body {
+    margin: 0;
+    padding-top: 40px;
+    padding-bottom: 60px;
+    padding-block-end: 20px;
+    box-sizing: border-box;
+}
+
+/* Estilos de Layout */
+.calendar-container {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    height: 500px;
+    margin: 10px;
+    overflow: auto;
+}
+
+.c-calendar__table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.c-calendar__table th, .c-calendar__table td {
+    width: 14.28%;
+    height: 50px;
+    border: 1px solid #ddd;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.c-calendar__table th {
+    background-color: #f2f2f2;
+}
+
+.c-calendar__table td:hover {
+    background-color: #e0e0e0;
+}
+
+.selected {
+    background-color: #00B98E;
+    color: white;
+}
+
+/* Navegação de Mês e Ano */
+.month-year-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.month-year-button {
+    background-color: #00B98E;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+}
+
+.month-year-button:hover {
+    background-color: #009b76;
+}
+
+/* Responsividade para dispositivos menores (350px) */
+@media (max-width: 350px) {
+    .calendar-container {
+        width: 100%;
+        height: auto;
+    }
+    .c-calendar__table td {
+        padding: 8px;
+        font-size: 14px;
+    }
+}
+
+/* Estilos aprimorados para o formulário */
+.form-container {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 350px;
+    margin: 20px auto;
+    margin-bottom: 60px;
+}
+
+.form-container label {
+    display: block;
+    font-weight: bold;
+    margin: 0;
+    text-align: left;
+}
+
+.form-container input, 
+.form-container select, 
+.form-container textarea, 
+.form-container input[type="time"], 
+.form-container button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+/* Ajuste para o campo de data */
+#dob {
+    color: #21214C;
+    font-weight: bold;
+    height: 40px;
+}
+
+/* Estilo para o botão de envio */
+.form-container button {
+    background-color: #00B98E;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-container button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Responsividade do formulário para dispositivos menores */
+@media (max-width: 350px) {
+    .form-container {
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+/* Garantindo que o formulário tenha a mesma largura do calendário */
+.calendar-container, .form-container {
+    width: 350px !important;
+    max-width: 100%;
+    margin: auto;
+}
+
+/* Responsividade para dispositivos menores (Mobile - 35px) */
+@media (max-width: 350px) {
+    .calendar-container, .form-container {
+        width: 100% !important;
+        padding: 10px;
+    }
+
+    .footer-container {
+        max-width: 350px !important;
+    }
+}
+
+/* Responsividade para PC (350px) */
+@media (min-width: 350px) {
+    .calendar-container, .form-container {
+        width: 350px !important;
+        padding: 20px;
+    }
+
+    .footer-container {
+        max-width: 350px !important;
+    }
+}
+
+/* Definição geral do footer */
+.footer-container {
+    width: 100%;
+    margin: auto;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #21214C;
+    color: white;
+    text-align: center;
+}
+
+
+@media (max-width: 350px) {
+    .footer-container {
+        width: 100% !important;
+        padding: 10px;
+    }
+}
+
+/* Adicionando espaçamento entre os elementos principais */
+header, .form-container, footer {
+    margin-bottom: 30px;
+}
+
+.calendar-container {
+    margin-bottom: 20px;
+}
+
+.form-container h3 {
+    margin-bottom: 20px;
+}
+
+.form-container input, 
+.form-container select, 
+.form-container textarea {
+    margin-bottom: 15px;
+}
+
+.form-container button {
+    margin-top: 20px;
+}
+
+.footer-container {
+    margin-top: 30px;
+}
+
+/* Responsividade para 768px */
+@media (min-width: 768px) {
+    .calendar-container, .form-container {
+        width: 768px !important;
+    }
+    .form-container button {
+        font-size: 18px;
+    }
+    .form-container input,
+    .form-container select,
+    .form-container textarea {
+        font-size: 16px;
+    }
+}
+
+</style>
+
+
+</head>
+<body>
+<header>
+    <div class="calendar-container" id="calendar">
+        <div class="month-year-container">
+            <button id="prev" class="month-year-button" onclick="changeMonth(-1)">
+                <i class="fa fa-angle-left" aria-hidden="true"></i>
+            </button>
+            <span id="month-name" class="c-paginator__month"></span>
+            <span class="c-paginator__year" id="year"></span>
+            <button id="next" class="month-year-button" onclick="changeMonth(1)">
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+            </button>
+        </div>
+        <table class="c-calendar__table">
+            <thead>
+                <tr>
+                    <th>Dom</th><th>Seg</th><th>Ter</th><th>Qua</th><th>Qui</th><th>Sex</th><th>Sab</th>
+                </tr>
+            </thead>
+            <tbody id="calendar-body"></tbody>
+        </table>
+    </div>
+</header>
+<br>
+<!-- Formulário de Agendamento -->
+<style>
+/* Alinhamento de todos os campos dentro do form */
+.form-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Duas colunas de largura igual */
+    gap: 10px; /* Espaçamento entre os campos */
+    color: black; /* Cor do texto para toda a estrutura */
+}
+
+/* Ajusta o campo de "bairro" para ocupar toda a largura */
+#district {
+    grid-column: span 2; /* Ocupa as duas colunas */
+}
+
+/* Garantir que todos os campos fiquem com largura total */
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    box-sizing: border-box;
+    color: black; /* Cor do texto dentro dos campos */
+    background-color: #FFFFFF; /* Cor de fundo dos campos */
+}
+
+/* Ajusta a altura do campo de "motivo" para se alinhar com os outros campos */
+#reason {
+    height: 100px; /* Ajusta a altura do textarea */
+    resize: vertical; /* Permite que o usuário redimensione o campo verticalmente */
+}
+
+/* Ajuste para o botão de envio */
+#submit {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #0CA24C; /* Cor de fundo */
+    color: white; /* Cor do texto do botão */
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Aumenta a altura do calendário para a versão mobile */
+@media (max-width: 768px) {
+    #dob {
+        height: 40px; /* Aumenta a altura do campo de data em dispositivos móveis */
+    }
+}
+
+/* Garantindo que todos os links dentro do footer sejam brancos */
+.footer-container a {
+    color: white !important;
+    text-decoration: none;
+}
+
+.footer-container a:hover {
+    text-decoration: underline;
+}
+</style>
+
+<div class="form-container">
+
+    <h3>Agendamento</h3>
+    <input type="text" id="name" placeholder="Nome" maxlength="50" required>
+    <input type="text" id="surname" placeholder="Sobrenome" maxlength="50" required>
+    <input type="date" id="dob" required>
+
+    <!-- Pergunta de maioridade como select box -->
+    <label for="age-select">Você é maior de idade?</label>
+    <select id="age-select" required onchange="checkAgeAndEnableSubmit()">
+        <option value="">Selecione...</option>
+        <option value="sim">Sim</option>
+        <option value="nao">Não</option>
+    </select>
+
+    <!-- Campo para número de celular com DDD -->
+    <input type="tel" id="phone" placeholder="DDD + Número de celular" pattern="\d{2}\d{9}" required>
+
+    <!-- Campo para e-mail -->
+    <input type="email" id="email" placeholder="E-mail" maxlength="100" required>
+
+    <!-- Campos de endereço separados -->
+    <input type="text" id="street" placeholder="Rua" maxlength="100" required>
+    <input type="text" id="house-number" placeholder="Número" maxlength="10" required>
+    <input type="text" id="district" placeholder="Bairro" maxlength="50" required>
+
+    <!-- Campo de seleção para cidade -->
+    <label for="city-select">Cidade</label>
+    <select id="city-select" required>
+        <option value="">Selecione...</option>
+        <option value="Itaquaquecetuba">Itaquaquecetuba</option>
+        <option value="Arujá">Arujá</option>
+    </select>
+
+    <!-- Campo de seleção para estado e país -->
+    <label for="state-select">Estado</label>
+    <select id="state-select" disabled>
+        <option value="São Paulo" selected>São Paulo</option>
+    </select>
+
+    <label for="country-select">País</label>
+    <select id="country-select" disabled>
+        <option value="Brasil" selected>Brasil</option>
+    </select>
+
+    <!-- Campo de motivo do agendamento -->
+    <textarea id="reason" placeholder="Motivo do agendamento (máx. 1000 caracteres)" maxlength="1000" required></textarea>
+
+    <!-- Novo Campo de Horário -->
+    <label for="appointment-time">Horário do Agendamento:</label>
+    <input type="time" id="appointment-time" required>
+
+    <!-- Botão de envio com validação de maioridade -->
+    <button id="submit" disabled onclick="submitForm()">Enviar</button>
+</div><!-- Footer Start -->
+<footer><div class="footer-container">
+                <div class="container py-4 bg-secondary text-center">
+                    <p class="m-0 text-white">
+                        &copy; <a class="text-white font-weight-bold" href="https://painelsummerside.com.br">Seo Summerside</a>. Desenvolvido por <a class="text-white font-weight-bold" href="https://cv.taqe.com.br/62611a621fbdba00282927f1">Leonardo</a>
+                        <a href="https://www.iubenda.com/privacy-policy/49434754" class="iubenda-white iubenda-noiframe iubenda-embed iubenda-noiframe " title="Política de Privacidade ">Política de Privacidade</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
+<a href="https://www.iubenda.com/privacy-policy/49434754/cookie-policy" class="iubenda-white iubenda-noiframe iubenda-embed iubenda-noiframe " title="Política de Cookies ">Política de Cookies</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
+                    </p>
+                </div>
+            </div>
+        </div>
+</div><br></footer>
+<!-- Script do Calendário -->
+    <script src="js/calendario.js"></script>
+    <script src="js/main.js"></script>
+<script>
+let currentYear = new Date().getFullYear();
+let currentMonth = new Date().getMonth();
+let selectedDate = '';
+
+// Atualiza o calendário exibido
+function updateCalendar() {
+    document.getElementById('month-name').textContent = new Intl.DateTimeFormat('pt-BR', { month: 'long' }).format(new Date(currentYear, currentMonth));
+    document.getElementById('year').textContent = currentYear;
+
+    let monthLength = new Date(currentYear, currentMonth + 1, 0).getDate();
+    let startDay = new Date(currentYear, currentMonth, 1).getDay();
+    
+    let html = '<tr>';
+    for (let i = 0; i < startDay; i++) html += "<td></td>";
+
+    for (let day = 1; day <= monthLength; day++) {
+        let fullDate = `${currentYear}-${(currentMonth + 1).toString().padStart(2, '0')}-${day.toString().padStart(2, '0')}`;
+        html += `<td onclick="selectDate(this)" data-day="${fullDate}">${day}</td>`;
+        if ((startDay + day) % 7 === 0) html += "</tr><tr>";
+    }
+    document.getElementById('calendar-body').innerHTML = html + '</tr>';
+}
+
+// Muda o mês no calendário
+function changeMonth(direction) {
+    currentMonth += direction;
+    if (currentMonth < 0) { currentMonth = 11; currentYear--; }
+    if (currentMonth > 11) { currentMonth = 0; currentYear++; }
+    updateCalendar();
+}
+
+// Seleciona uma data no calendário
+function selectDate(cell) {
+    const previouslySelected = document.querySelector('.selected');
+    if (previouslySelected) previouslySelected.classList.remove('selected');
+    
+    cell.classList.add('selected');
+    selectedDate = cell.getAttribute('data-day');
+    console.log('Data selecionada:', selectedDate);
+}
+
+// Habilita/desabilita o botão de envio com base na idade
+function checkAgeAndEnableSubmit() {
+    const ageSelect = document.getElementById('age-select');
+    document.getElementById('submit').disabled = ageSelect.value === 'nao';
+}
+
+// Envio dos dados para o WhatsApp
+function submitForm() {
+    // Captura os valores do formulário
+    const name = document.getElementById('name').value.trim();
+    const surname = document.getElementById('surname').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const street = document.getElementById('street').value.trim();
+    const houseNumber = document.getElementById('house-number').value.trim();
+    const district = document.getElementById('district').value.trim();
+    const city = document.getElementById('city-select').value.trim();
+    const reason = document.getElementById('reason').value.trim();
+    const appointmentTime = document.getElementById('appointment-time').value.trim(); // Captura do horário
+
+    // Verifica se uma data foi selecionada
+    if (!selectedDate) {
+        alert("Por favor, selecione uma data no calendário antes de enviar.");
+        return;
+    }
+
+    // Verifica se o horário foi preenchido
+    if (!appointmentTime) {
+        alert("Por favor, selecione um horário para o agendamento.");
+        return;
+    }
+
+    // Monta a mensagem para envio via WhatsApp
+    const message = `Agendamento:\nNome: ${name} ${surname}\nData: ${selectedDate}\nHorário: ${appointmentTime}\nTelefone: ${phone}\nE-mail: ${email}\nEndereço: ${street}, ${houseNumber}, ${district} - ${city}\nMotivo: ${reason}`;
+
+    // Criando o link para o WhatsApp
+    const whatsappNumber = "+5511948793902"; // Número fixo para envio
+    const whatsappUrl = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(message)}`;
+
+    // Redireciona para o WhatsApp
+    window.open(whatsappUrl, '_blank');
+    alert('Agendado com sucesso!');
+}
+
+// Atualiza o calendário na inicialização
+updateCalendar();
+
+</script>
+</body>
+</html>
