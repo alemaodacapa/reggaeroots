@@ -13,9 +13,14 @@
 <p align="center">
   O **Reggaeroots** é uma plataforma de músicas e Entretenimento que faz de seu dia mais alegre se você souber usar, proporcionando uma experiência eficiente para operadores e ouvintes. 
 </p>
-
 <table>
-<a class="button button-lg button-primary fadeinup animated" href="https://app.musicdonna.com/K3i8qyRP" data-caption-animate="fadeinup" data-caption-delay="450">BAIXE O APP</a>
+<div style="display: flex; align-items: center; gap: 10px;">
+  <a href="https://app.musicdonna.com/K3i8qyRP" style="display: flex; flex-direction: column; align-items: center; text-decoration: none;">
+    <img src="https://social.x10.mx/imagens/donna.png" alt="Donna" style="width: 120px; border-radius: 12px;">
+    <span style="margin-top: 5px; font-size: 16px; font-weight: bold; color: #ff7e5f;"><div>🎵 Baixe o App</span>
+  </a></div></span></a>
+</div>
+
 
 <p align="center">
   <a href="https://reggaeroots.com.br/index.php">Início</a> •
