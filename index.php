@@ -698,7 +698,7 @@ video.addEventListener('click', () => {
               <div class="container">
                 <div class="row justify-content-lg-left">
                   <div class="col-md-12 col-xl-10">
-                    <h1 data-caption-animate="fadeinup" data-caption-delay="100">oferecendo a melhor
+                    <h1 data-caption-animate="fadeinup" data-caption-delay="100">Oferecemos a melhor
                       música para lojas, estabelecimentos comerciais e entretenimento
                     </h1>
                     <a class="button button-lg button-primary" href="apk/android/app-release.apk" data-caption-animate="fadeinup" data-caption-delay="450">baixe app</a>
