@@ -13,7 +13,7 @@
     <!-- open graph meta tags -->
     <meta property="og:title" content="reggaeroots - o melhor do reggae para você">
     <meta property="og:description" content="descubra uma vasta seleção de músicas reggae, desde clássicos jamaicanos até as novas tendências do reggae. ouça agora!">
-    <meta property="og:image" content="https://reggaeroots.com.br/images/bg-1-1920x1000.jpg">
+    <meta property="og:image" content="https://reggaeroots.com.br/images/carousel-6.jpg">
     <meta property="og:url" content="https://reggaeroots.com.br">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="reggaeroots">
@@ -24,9 +24,9 @@
     <meta name="twitter:image" content="https://reggaeroots.com.br/images/bg-1-1920x1000.jpg">
     <!-- favicon and icons -->
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
-    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
-    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" href="images/favicon.ico" sizes="32x32">
+    <link rel="icon" type="image/png" href="images/favicon.ico" sizes="16x16">
+    <link rel="shortcut icon" href="images/favicon.ico">
     <link rel="manifest" href="/site.webmanifest">
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="theme-color" content="#2196f3">
@@ -46,149 +46,273 @@
     <link href="lib/animate/animate.min.css" rel="stylesheet">
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
-    <style>
-      .ie-panel {
-      display: none;
-      background: #212121;
-      padding: 10px 0;
-      box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);
-      clear: both;
-      text-align: center;
-      position: relative;
-      z-index: 1;
-      }
-      html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {
-      display: block;
-      }
-      .button-container {
-      display: flex;
-      justify-content: center;
-      margin-top: 15px; /* distância entre a box e o botão */
-      }
-      .button {
-      /* estilo do botão */
-      background-color: #008cba;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      font-size: 16px;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      }
-      .button svg {
-      margin-right: 8px;
-      }
-      /* garantir que o botão não quebre o layout */
-      .button-container a {
-      display: inline-block;
-      }
-      .button {
-      width: fit-content;
-      display: flex;
-      padding: 1.2em 1rem;
-      cursor: pointer;
-      gap: 0.4rem;
-      font-weight: bold;
-      border-radius: 30px;
-      text-shadow: 2px 2px 3px rgb(136 0 136 / 50%);
-      background: linear-gradient(15deg, #880088, #aa2068, #cc3f47, #de6f3d, #f09f33, #de6f3d, #cc3f47, #aa2068, #880088) no-repeat;
-      background-size: 300%;
-      color: #fff;
-      border: none;
-      background-position: left center;
-      box-shadow: 0 30px 10px -20px rgba(0,0,0,.2);
-      transition: background .3s ease;
-      }
-      .button:hover {
-      background-size: 320%;
-      background-position: right center;
-      }
-      .button:hover svg {
-      fill: #fff;
-      }
-      .button svg {
-      width: 23px;
-      fill: #f09f33;
-      transition: .3s ease;
-      }
-      /* estilos do botão */
-      .btn-container {
-      display: flex;
-      width: 220px; /* aumentei a largura do botão */
-      height: fit-content;
-      background-color: #1d2129;
-      border-radius: 40px;
-      box-shadow: 0px 5px 10px #bebebe;
-      justify-content: space-between;
-      align-items: center;
-      border: none;
-      cursor: pointer;
-      padding: 12px; /* aumentei um pouco o padding */
-      }
-      .icon-container {
-      width: 50px; /* ajustei um pouco o tamanho do ícone */
-      height: 50px;
-      background-color: #f59aff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 50%;
-      border: 3px solid #1d2129;
-      }
-      .text {
-      width: calc(220px - 60px); /* ajustei o espaço do texto */
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-size: 1.1em;
-      letter-spacing: 1.2px;
-      font-weight: bold;
-      }
-      .icon-container svg {
-      transition-duration: 1.5s;
-      }
-      .btn-container:hover .icon-container svg {
-      transition-duration: 1.5s;
-      animation: arrow 1s linear infinite;
-      }
-      @keyframes arrow {
-      0% {
-      opacity: 0;
-      margin-left: 0px;
-      }
-      100% {
-      opacity: 1;
-      margin-left: 10px;
-      }
-      }
-      .video-container {
-      position: relative;
-      width: 100%;
-      max-width: 1140px; /* largura máxima para desktops */
-      margin: auto; /* centraliza */
-      aspect-ratio: 16 / 9; /* mantém a proporção correta do vídeo */
-      }
-      .video-container iframe {
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      }
-      .rd-navbar-nav .rd-nav-link {
-  color: white !important; /* Define a cor do texto para branco */
-  transition: color 0.3s ease; /* Adiciona uma transição suave */
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-79F3XE25WR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-79F3XE25WR');
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-59F8JSKD');</script>
+<!-- End Google Tag Manager -->
+
+<style>
+    .ie-panel {
+        display: none;
+        background: #212121;
+        padding: 10px 0;
+        box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);
+        clear: both;
+        text-align: center;
+        position: relative;
+        z-index: 1;
+    }
+    html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {
+        display: block;
+    }
+
+    /* Botão centralizado com novo estilo */
+    .button-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 15px;
+    }
+    .button-container button {
+        border: none;
+        border-radius: 20px;
+        background: linear-gradient(32deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+        transition: all 1.5s ease;
+        font-family: 'Ropa Sans', sans-serif;
+        font-weight: bold;
+        letter-spacing: 2px; /* Espaçamento entre letras */
+        padding: 16px 36px; /* Mais espaço em cima, embaixo e laterais */
+        cursor: pointer;
+    }
+    .button-container button span {
+        display: inline-block;
+        padding: 20px 45px; /* Topo, base e laterais */
+        font-size: 17px;
+        letter-spacing: 2px;
+        border-radius: 20px;
+        background: #ffffff10;
+        backdrop-filter: blur(20px);
+        transition: 0.4s ease-in-out;
+        transition-property: color;
+        height: 100%;
+        width: 100%;
+    }
+    .button-container button span:hover {
+        backdrop-filter: blur(0px);
+        color: #ffffff;
+    }
+
+    /* Botão com ícone redondo */
+    .btn-container {
+        display: flex;
+        width: 220px;
+        height: fit-content;
+        background-color: #1d2129;
+        border-radius: 40px;
+        box-shadow: 0px 5px 10px #bebebe;
+        justify-content: space-between;
+        align-items: center;
+        border: none;
+        cursor: pointer;
+        padding: 16px; /* Mais espaço */
+    }
+    .icon-container {
+        width: 50px;
+        height: 50px;
+        background-color: #f59aff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        border: 3px solid #1d2129;
+    }
+    .icon-container svg {
+        transition-duration: 1.5s;
+    }
+    .btn-container:hover .icon-container svg {
+        animation: arrow 1s linear infinite;
+    }
+    .text {
+        width: calc(220px - 60px);
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 1.1em;
+        letter-spacing: 2px; /* Letras espaçadas */
+        font-weight: bold;
+        padding: 10px 20px; /* Espaço ao redor do texto */
+    }
+    @keyframes arrow {
+        0% {
+            opacity: 0;
+            margin-left: 0px;
+        }
+        100% {
+            opacity: 1;
+            margin-left: 10px;
+        }
+    }
+
+    /* Vídeo responsivo */
+    .video-container {
+        position: relative;
+        width: 100%;
+        max-width: 1140px;
+        margin: auto;
+        aspect-ratio: 16 / 9;
+    }
+    .video-container iframe {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+    }
+
+    /* Navbar com hover verde claro */
+    .rd-navbar-nav .rd-nav-link {
+        color: white !important;
+        transition: color 0.3s ease;
+    }
+    .rd-navbar-nav .rd-nav-link:hover {
+        color: #90ee90 !important;
+    }
+
+    /* Estilos do player de rádio (mantido como solicitado) */
+    .radio-player-wrapper {
+        background: #8b0000;
+        color: white;
+        border-radius: 15px;
+        padding: 25px;
+        box-shadow: 0 0 15px rgba(0,0,0,0.3);
+        font-family: 'Segoe UI', sans-serif;
+    }
+    .radio-player-wrapper .player-status {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+        font-size: 16px;
+    }
+    .radio-player-wrapper .status-light {
+        width: 14px;
+        height: 14px;
+        background: red;
+        border-radius: 50%;
+        margin-right: 10px;
+        transition: background 0.3s ease;
+    }
+    .radio-player-wrapper .status-light.playing {
+        background: limegreen;
+    }
+    .radio-player-wrapper .controls {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        margin: 15px 0;
+        flex-wrap: wrap;
+    }
+    .radio-player-wrapper .jp-btn {
+        background: #fff;
+        color: #8b0000;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+    .radio-player-wrapper .jp-btn:hover {
+        background: #ffe6e6;
+    }
+    .radio-player-wrapper .jp-time-rail,
+    .radio-player-wrapper .jp-progress,
+    .radio-player-wrapper .jp-seek-bar {
+        width: 100%;
+        height: 10px;
+        background: #300000;
+        border-radius: 5px;
+        overflow: hidden;
+        margin: 10px 0;
+    }
+    .radio-player-wrapper .jp-play-bar {
+        height: 100%;
+        background: limegreen;
+        width: 0%;
+    }
+    .radio-player-wrapper .jp-volume-bar {
+        height: 8px;
+        background: #aaa;
+        border-radius: 5px;
+        margin-top: 10px;
+    }
+    .radio-player-wrapper .jp-volume-bar-value {
+        height: 100%;
+        width: 50%;
+        background: #fff;
+    }
+    .radio-player-wrapper .track-title {
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    #track-artist {
+        transition: color 0.3s ease;
+    }
+    #track-artist:hover {
+        color: #00ff88;
+    }
+    
+    /* Shop Botton
+/* Botão call to action estilo Uiverse */
+.button {
+  width: 180px;
+  height: 40px;
+  background-image: linear-gradient(rgb(214, 202, 254), rgb(158, 129, 254));
+  border: none;
+  border-radius: 50px;
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  cursor: pointer;
+  box-shadow: 1px 3px 0px rgb(139, 113, 255);
+  transition-duration: .3s;
+  font-family: 'Ropa Sans', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
-.rd-navbar-nav .rd-nav-link:hover {
-  color: #90ee90 !important; /* Muda a cor para verde claro ao passar o mouse */
+.cartIcon {
+  width: 14px;
+  height: auto;
 }
 
-    </style>
-  </head>
+.cartIcon path {
+  fill: white;
+}
+
+.button:active {
+  transform: translate(2px ,0px);
+  box-shadow: 0px 1px 0px rgb(139, 113, 255);
+  padding-bottom: 1px;
+}
+
+</style>
+</head>
 <!-- Anúncio com vídeo local -->
 <div id="ad-popup" class="ad-popup">
     <div class="ad-popup-content">
@@ -594,238 +718,350 @@ video.addEventListener('click', () => {
           </ul>
         </div>
       </section>
-
-      <!-- spotify embed -->
-      <iframe style="border-radius:0px" src="https://open.spotify.com/embed/artist/1WilWzr4bR77Z317TJ4tE7?utm_source=generator&theme=0" width="100%" height="250" frameborder="1" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-      <div><iframe src="https://d1csarkz8obe9u.cloudfront.net/index.php/posterbuilder/view/520180e7d53fa65e1eb861714ab725b2/1" style="height: 59px; width:100%; border:none;"></iframe></div>
-      <!-- marcar presença button -->
-      <a href="https://www.facebook.com/share/p/15nrjn4ess/" target="_blank" class="button-link">
-        <center>
-          <button class="button">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" viewbox="0 0 24 24" height="24" fill="none" class="svg-icon">
-              <g stroke-width="2" stroke-linecap="round" stroke="#fff">
-                <rect y="5" x="4" width="16" rx="2" height="16"></rect>
-                <path d="m8 3v4"></path>
-                <path d="m16 3v4"></path>
-                <path d="m4 11h16"></path>
-              </g>
-            </svg>
-            <span class="label">Marcar presença</span>
-          </button>
-        </center>
-      </a>
+</head>
+<body>
+<!-- Player de Rádio Premium --> 
+<section class="radio-premium" style="background: #121218; color: #fff; padding: 60px 20px; font-family: 'Segoe UI', sans-serif;">
+  <div class="radio-box" style="max-width: 800px; margin: 0 auto; display: flex; flex-wrap: wrap; background: #1c1c28; border-radius: 20px; box-shadow: 0 0 25px rgba(0,0,0,0.6); overflow: hidden;">
+    <!-- Capa do Álbum -->
+    <div class="radio-cover" style="flex: 1 1 300px; background: #000; display: flex; align-items: center; justify-content: center;">
+      <img src="https://i.scdn.co/image/ab67616d00001e02ccdb0c63b7c823cf38974b5d" alt="Capa do Álbum" style="width: 100%; height: auto; max-width: 100%; border-radius: 0;">
     </div>
-    <!-- variety of music genres-->
-    <section class="section section-lg">
-      <div class="container">
-        <div class="block-lg text-center">
-          <h2>uma variedade de gêneros musicais</h2>
-          <p>oferecemos aos nossos clientes uma ampla variedade de gêneros musicais, desde reggae e dance até sertanejo e outros. explore a música que temos a oferecer abaixo, e atraia mais clientes para sua loja com músicas exclusivas jamais ouvidas antes em rádios públicas.</p>
+
+    <!-- Conteúdo e controles -->
+    <div class="radio-controls" style="flex: 1 1 400px; padding: 30px;">
+      <h2 id="track-title" style="font-size: 24px; margin-bottom: 5px; color: white;">🎵 Nome da Faixa</h2>
+      <a id="track-artist" href="https://open.spotify.com/intl-pt/artist/1WilWzr4bR77Z317TJ4tE7?si=mpISUHU6TyeeuU42SiGH_w" target="_blank" style="font-size: 16px; color: #aaa; text-decoration: none;">
+        🎤 Reggaeroots
+      </a>
+
+      <!-- Controles principais -->
+      <div style="margin: 30px 0; display: flex; justify-content: center; gap: 20px;">
+        <button id="prev" style="background: none; border: none; font-size: 28px; color: #aaa; cursor: pointer;">⏮</button>
+        <button id="playPause" style="background: #00ff88; color: #121218; border: none; font-size: 24px; padding: 12px 24px; border-radius: 50px; font-weight: bold; cursor: pointer;">▶</button>
+        <button id="next" style="background: none; border: none; font-size: 28px; color: #aaa; cursor: pointer;">⏭</button>
+      </div>
+
+      <!-- Barra de progresso -->
+      <div style="margin-bottom: 25px;">
+        <div style="height: 6px; width: 100%; background: #333; border-radius: 4px; overflow: hidden;">
+          <div id="progress-bar" style="width: 0%; height: 100%; background: #00ff88;"></div>
         </div>
-        <div class="row row-30 justify-content-center">
-          <!-- gênero 1: reggae -->
-          <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 wow fadeinleft">
-            <a class="variety-box-wrapper" href="https://pay.kiwify.com.br/2g3pxok">
-              <figure class="variety-box">
-                <div class="variety-media"><img src="images/music-style-7-25x63.png" alt="" width="25" height="63"/>
-                </div>
-                <figcaption>
-                  <span>reggae</span>
-                  <p>shows semanais e exclusividades do rock - só na reggae roots.</p>
-                </figcaption>
-              </figure>
-            </a>
-            </a>
-            <!-- botão comprar com link -->
-            <div class="button-container text-center">
-              <a href="https://pay.kiwify.com.br/2g3PxOK" target="_blank">
-                <button class="button">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 36 24">
-                    <path d="m18 0 8 12 10-8-4 20h4l0 4l10 8 8-12z"></path>
-                  </svg>
-                  comprar
-                </button>
-              </a>
-            </div>
-          </div>
-          <!-- gênero 2: new-wave -->
-          <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 wow fadeinleft">
-            <a class="variety-box-wrapper" href="https://open.spotify.com/intl-pt/track/3unmbb5oyjt5nifegkenx4?si=0be9c0f6eac94ae5">
-              <figure class="variety-box">
-                <div class="variety-media">
-                  <img src="images/music-style-1-49x49.png" alt="" width="49" height="49"/>
-                </div>
-                <figcaption>
-                  <span>new-wave</span>
-                  <p>selecionamos o melhor da new-wave para nossos ouvintes.</p>
-                </figcaption>
-              </figure>
-            </a>
-            <!-- botão ouvir com link -->
-            <div class="button-container text-center">
-              <a href="https://open.spotify.com/intl-pt/track/3unmbb5oyjt5nifegkenx4?si=0be9c0f6eac94ae5" target="_blank">
-                <button class="button">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 36 24">
-                    <path d="m18 0 8 12 10-8-4 20h4l0 4l10 8 8-12z"></path>
-                  </svg>
-                  ouvir
-                </button>
-              </a>
-            </div>
-          </div>
-          <!-- gênero 3: pop & music -->
-          <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 wow fadeinleft">
-            <a class="variety-box-wrapper" href="https://open.spotify.com/intl-pt/track/0qwyryfdbgcyowaj5rmtal?si=5c44bbd016ad4d7a">
-              <figure class="variety-box">
-                <div class="variety-media">
-                  <img src="images/music-style-2-47x56.png" alt="" width="47" height="56"/>
-                </div>
-                <figcaption>
-                  <span>ouvir</span>
-                  <p>aproveite a melhor música pop, d&b e newwave na nossa rádio.</p>
-                </figcaption>
-              </figure>
-            </a>
-            <!-- botão ouvir com link -->
-            <div class="button-container text-center">
-              <a href="https://open.spotify.com/intl-pt/track/0qwyryfdbgcyowaj5rmtal?si=5c44bbd016ad4d7a" target="_blank">
-                <button class="button">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 36 24">
-                    <path d="m18 0 8 12 10-8-4 20h4l0 4l10 8 8-12z"></path>
-                  </svg>
-                  ouvir
-                </button>
-              </a>
-            </div>
-          </div>
-          <!-- gênero 4: sertanejo -->
-          <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 wow fadeinleft">
-            <a class="variety-box-wrapper" href="https://open.spotify.com/intl-pt/album/4j8p5z1ljawvhdgzaekvbo?si=jizyabm1q_axhinvs8mynw">
-              <figure class="variety-box">
-                <div class="variety-media">
-                  <img src="images/music-style-3-37x46.png" alt="" width="37" height="46"/>
-                </div>
-                <figcaption>
-                  <span>sertanejo</span>
-                  <p>dezenas de novas faixas de sertanejo são transmitidas regularmente na reggae roots.</p>
-                </figcaption>
-              </figure>
-            </a>
-            <!-- botão ouvir com link -->
-            <div class="button-container text-center">
-              <a href="https://open.spotify.com/intl-pt/album/4j8p5z1ljawvhdgzaekvbo?si=jizyabm1q_axhinvs8mynw" target="_blank">
-                <button class="button">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 36 24">
-                    <path d="m18 0 8 12 10-8-4 20h4l0 4l10 8 8-12z"></path>
-                  </svg>
-                  ouvir
-                </button>
-              </a>
-            </div>
-          </div>
-          <!-- gênero 5: dance -->
-          <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 wow fadeinleft">
-            <a class="variety-box-wrapper" href="https://sndo.ffm.to/obbkkqo">
-              <figure class="variety-box">
-                <div class="variety-media">
-                  <img src="images/music-style-4-53x45.png" alt="" width="53" height="45"/>
-                </div>
-                <figcaption>
-                  <span>dance</span>
-                  <p>nossos djs transmitem várias faixas de euro dance online.</p>
-                </figcaption>
-              </figure>
-            </a>
-            <!-- botão ouvir com link -->
-            <div class="button-container text-center">
-              <a href="https://sndo.ffm.to/obbkkqo" target="_blank">
-                <button class="button">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 36 24">
-                    <path d="m18 0 8 12 10-8-4 20h4l0 4l10 8 8-12z"></path>
-                  </svg>
-                  ouvir
-                </button>
-              </a>
-            </div>
-          </div>
-          <!-- gênero 6: rap -->
-          <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 wow fadeinleft">
-            <a class="variety-box-wrapper" href="https://open.spotify.com/intl-pt/album/2rnc62k4su8vdjelzwrf7n?si=go-e_gsjrzyhqolutmju6w">
-              <figure class="variety-box">
-                <div class="variety-media">
-                  <img src="images/music-style-5-51x48.png" alt="" width="51" height="48"/>
-                </div>
-                <figcaption>
-                  <span>rap</span>
-                  <p>ouça a melhor seleção do rap nacional na reggae roots.</p>
-                </figcaption>
-              </figure>
-            </a>
-            <!-- botão ouvir com link -->
-            <div class="button-container text-center">
-              <a href="https://open.spotify.com/intl-pt/album/2rnc62k4su8vdjelzwrf7n?si=go-e_gsjrzyhqolutmju6w" target="_blank">
-                <button class="button">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 36 24">
-                    <path d="m18 0 8 12 10-8-4 20h4l0 4l10 8 8-12z"></path>
-                  </svg>
-                  ouvir
-                </button>
-              </a>
-            </div>
-          </div>
-          <!-- gênero 7: pop -->
-          <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 wow fadeinleft">
-            <a class="variety-box-wrapper" href="https://sndo.ffm.to/jxrb58y">
-              <figure class="variety-box">
-                <div class="variety-media">
-                  <img src="images/music-style-6-31x50.png" alt="" width="31" height="50"/>
-                </div>
-                <figcaption>
-                  <span>pop</span>
-                  <p>o melhor do pop você encontra aqui na reggae roots.</p>
-                </figcaption>
-              </figure>
-            </a>
-            <!-- botão ouvir com link -->
-            <div class="button-container text-center">
-              <a href="https://sndo.ffm.to/jxrb58y" target="_blank">
-                <button class="button">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 36 24">
-                    <path d="m18 0 8 12 10-8-4 20h4l0 4l10 8 8-12z"></path>
-                  </svg>
-                  ouvir
-                </button>
-              </a>
-            </div>
-          </div>
-          <!-- gênero 80's: anos 80 -->
-          <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 wow fadeinleft">
-            <a class="variety-box-wrapper" href="https://sndo.ffm.to/a4vxdx9">
-              <figure class="variety-box">
-                <div class="variety-media">
-                  <img src="images/music-style-7-25x63.png" alt="" width="25" height="63"/>
-                </div>
-                <figcaption>
-                  <span>80's</span>
-                  <p>selecionamos o melhor dos anos 80's para nossos ouvintes.</p>
-                </figcaption>
-              </figure>
-            </a>
-            <!-- botão ouvir com link -->
-            <div class="button-container text-center">
-              <a href="https://sndo.ffm.to/a4vxdx9" target="_blank">
-                <button class="button">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 36 24">
-                    <path d="m18 0 8 12 10-8-4 20h4l0 4l10 8 8-12z"></path>
-                  </svg>
-                  ouvir
-                </button>
-              </a>
-            </div>
-          </div>
+        <div style="display: flex; justify-content: space-between; font-size: 12px; color: #aaa; margin-top: 5px;">
+          <span id="current-time">00:00</span>
+          <span id="total-duration">00:00</span>
         </div>
       </div>
-    </section>
+
+      <!-- Volume -->
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <span style="font-size: 18px;">🔊</span>
+        <input type="range" min="0" max="100" value="75" id="volume-control" style="flex: 1; accent-color: #00ff88;">
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+// Playlist
+const playlist = [
+  { src: 'audio/sound_Funk_do_Terror.mp3', title: 'Funk do Terror', artist: 'Reggaeroots' },
+  { src: 'audio/sound_Funk_do_Terror_Remix.mp3', title: 'Funk do Terror Remix', artist: 'Reggaeroots' },
+  { src: 'audio/sound_Bararabembembem.mp3', title: 'Bararabembembem', artist: 'Reggaeroots' },
+  { src: 'audio/sound_Bararabembembem_Remix.mp3', title: 'Bararabembembem Remix', artist: 'Reggaeroots' },
+  { src: 'audio/sound_Lembranças_Remix.mp3', title: 'Lembranças Remix', artist: 'Reggaeroots' },
+  { src: 'audio/sound_Luz_do_Neon.mp3', title: 'Luz do Neon', artist: 'Reggaeroots' },
+  { src: 'audio/sound_Não_pare_dance.mp3', title: 'Não Pare Dance', artist: 'Reggaeroots' },
+  { src: 'audio/sound_Promessas_Prometo.mp3', title: 'Promessas Prometo', artist: 'Reggaeroots' },
+  { src: 'audio/sound_Promisses.mp3', title: 'Promisses', artist: 'Reggaeroots' },
+  { src: 'audio/sound_Promisses_mix.mp3', title: 'Promisses Mix', artist: 'Reggaeroots' },
+  { src: 'audio/sound_Saudade_Remix[2].mp3', title: 'Saudade Remix 2', artist: 'Reggaeroots' },
+  { src: 'audio/sound_Saudade_Remix[3].mp3', title: 'Saudade Remix 3', artist: 'Reggaeroots' },
+  { src: 'audio/sound_Saudades.mp3', title: 'Saudades', artist: 'Reggaeroots' },
+  { src: 'audio/sound_Saudades_Remix.mp3', title: 'Saudades Remix', artist: 'Reggaeroots' },
+  { src: 'audio/sound_Estralador.mp3', title: 'Estralador', artist: 'Reggaeroots' },
+  { src: 'audio/sound_Estralador_(V1).mp3', title: 'Estralador V1', artist: 'Reggaeroots' },
+  { src: 'audio/sound_Esqueci.mp3', title: 'Esqueci', artist: 'Reggaeroots' },
+  { src: 'audio/sound_Esqueci_Remix.mp3', title: 'Esqueci Remix', artist: 'Reggaeroots' },
+  { src: 'audio/sound_Me-ensina_a_surfar.mp3', title: 'Me Ensina a Surfar', artist: 'Reggaeroots' },
+  { src: 'audio/sound_Partindo.mp3', title: 'Partindo', artist: 'Reggaeroots' },
+  { src: 'audio/sound_Partindo_Remix.mp3', title: 'Partindo Remix', artist: 'Reggaeroots' },
+  { src: 'audio/sound_Praia_do_Leblon.mp3', title: 'Praia do Leblon', artist: 'Reggaeroots' },
+  { src: 'audio/sound_Primeiro_amor.mp3', title: 'Primeiro Amor', artist: 'Reggaeroots' },
+  { src: 'audio/sound_Primeiro_Amor_Remix.mp3', title: 'Primeiro Amor Remix', artist: 'Reggaeroots' },
+  { src: 'audio/sound_Rainha_do_mar.mp3', title: 'Rainha do Mar', artist: 'Reggaeroots' },
+  { src: 'audio/sound_Selva_da_cidade.mp3', title: 'Selva da Cidade', artist: 'Reggaeroots' },
+  { src: 'audio/sound_Selva_guarda.mp3', title: 'Selva Guarda', artist: 'Reggaeroots' },
+  { src: 'audio/sound_Sentimento_ruim.mp3', title: 'Sentimento Ruim', artist: 'Reggaeroots' },
+  { src: 'audio/sound_Sentimento_ruim_Remix.mp3', title: 'Sentimento Ruim Remix', artist: 'Reggaeroots' },
+  { src: 'audio/sound_Promessas.mp3', title: 'Promessas', artist: 'Reggaeroots' },
+  { src: 'audio/sound_Promessas_remix.mp3', title: 'Promessas Remix', artist: 'Reggaeroots' },
+  { src: 'audio/sound_Jessica.mp3', title: 'Jessica', artist: 'Reggaeroots' },
+  { src: 'audio/sound_Raquel.mp3', title: 'Raquel', artist: 'Reggaeroots' },
+  { src: 'audio/sound_Só_contigo_quero_viver.mp3', title: 'Só Contigo Quero Viver', artist: 'Reggaeroots' },
+  { src: 'audio/sound_Tudo_o_que_ela_quer.mp3', title: 'Tudo o Que Ela Quer', artist: 'Reggaeroots' },
+  { src: 'audio/sound_Volta_Isabele.mp3', title: 'Volta Isabele', artist: 'Reggaeroots' },
+  { src: 'audio/sound_Faço_meu_Corre.mp3', title: 'Faço Meu Corre', artist: 'Reggaeroots' },
+  { src: 'audio/sound_Goiaba.mp3', title: 'Goiaba', artist: 'Reggaeroots' },
+  { src: 'audio/sound_Humanos_vs_Humanos_Remix.mp3', title: 'Humanos vs Humanos Remix', artist: 'Reggaeroots' },
+  { src: 'audio/sound_Laura.mp3', title: 'Laura', artist: 'Reggaeroots' },
+  { src: 'audio/sound_Só_novela.mp3', title: 'Só Novela', artist: 'Reggaeroots' },
+];
+
+let currentTrack = 0; // Índice da faixa atual
+let audio = new Audio(playlist[currentTrack].src);
+let isPlaying = false;
+
+// Função para atualizar os detalhes da música
+function updateTrackDetails() {
+  document.getElementById('track-title').textContent = `🎵 ${playlist[currentTrack].title}`;
+  
+  // Atualiza o nome do artista com link e estilo
+  const artistElement = document.getElementById('track-artist');
+  artistElement.innerHTML = `🎤 <a href="https://open.spotify.com/intl-pt/artist/1WilWzr4bR77Z317TJ4tE7?si=lXDdh5dQR-6i888G5vF22w" target="_blank" style="color: #aaa; text-decoration: none;" onmouseover="this.style.color='green'" onmouseout="this.style.color='white'">${playlist[currentTrack].artist}</a>`;
+  
+  audio.src = playlist[currentTrack].src;
+  audio.load();
+  document.getElementById('total-duration').textContent = formatTime(audio.duration);
+  document.getElementById('current-time').textContent = '00:00';
+}
+
+// Formatar o tempo (segundos) em minutos:segundos
+function formatTime(seconds) {
+  if (isNaN(seconds)) {
+    return '00:00'; // Garantir que o tempo não seja NaN
+  }
+  const min = Math.floor(seconds / 60);
+  const sec = Math.floor(seconds % 60);
+  return `${min}:${sec < 10 ? '0' : ''}${sec}`;
+}
+
+// Função para controlar o play/pause
+function togglePlayPause() {
+  if (isPlaying) {
+    audio.pause();
+    document.getElementById('playPause').textContent = '▶';
+  } else {
+    audio.play();
+    document.getElementById('playPause').textContent = '❚❚';
+  }
+  isPlaying = !isPlaying;
+}
+
+// Função para avançar para a próxima faixa
+function nextTrack() {
+  currentTrack = (currentTrack + 1) % playlist.length;
+  updateTrackDetails();
+  if (isPlaying) {
+    audio.play();
+  }
+}
+
+// Função para retroceder para a faixa anterior
+function prevTrack() {
+  currentTrack = (currentTrack - 1 + playlist.length) % playlist.length;
+  updateTrackDetails();
+  if (isPlaying) {
+    audio.play();
+  }
+}
+
+// Atualizar a barra de progresso
+audio.addEventListener('timeupdate', () => {
+  const progress = (audio.currentTime / audio.duration) * 100;
+  document.getElementById('progress-bar').style.width = progress + '%';
+  document.getElementById('current-time').textContent = formatTime(audio.currentTime);
+});
+
+// Controlar o volume
+document.getElementById('volume-control').addEventListener('input', (e) => {
+  audio.volume = e.target.value / 100;
+});
+
+// Quando a música terminar, vá para a próxima automaticamente
+audio.addEventListener('ended', nextTrack);
+
+// Inicializar player
+updateTrackDetails();
+
+// Event Listeners
+document.getElementById('playPause').addEventListener('click', togglePlayPause);
+document.getElementById('next').addEventListener('click', nextTrack);
+document.getElementById('prev').addEventListener('click', prevTrack);
+</script>
+<!-- variedade de gêneros musicais -->
+<section class="section section-lg">
+  <div class="container">
+    <div class="block-lg text-center">
+      <h2>Uma Variedade de Gêneros Musicais</h2>
+      <p>Oferecemos aos nossos clientes uma ampla variedade de gêneros musicais, desde reggae e dance até sertanejo e outros. Explore a música que temos a oferecer abaixo e atraia mais clientes para sua loja com músicas exclusivas jamais ouvidas antes em rádios públicas.</p>
+    </div>
+    <div class="row row-30 justify-content-center">
+
+      <!-- Gênero 1: Reggae -->
+      <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 wow fadeinleft">
+        <a class="variety-box-wrapper" href="https://pay.kiwify.com.br/2g3pxok">
+          <figure class="variety-box">
+            <div class="variety-media">
+              <img src="images/music-style-7-25x63.png" alt="Reggae" width="25" height="63"/>
+            </div>
+            <figcaption>
+              <span>Reggae</span>
+              <p>Shows semanais e exclusividades do reggae - só na Reggae Roots.</p>
+            </figcaption>
+          </figure>
+        </a>
+        <div class="button-container text-center">
+          <a href="https://pay.kiwify.com.br/2g3PxOK" target="_blank">
+            <button class="button">Comprar</button>
+          </a>
+        </div>
+      </div>
+
+      <!-- Gênero 2: New-Wave -->
+      <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 wow fadeinleft">
+        <a class="variety-box-wrapper" href="https://open.spotify.com/track/3unmbb5oyjt5nifegkenx4">
+          <figure class="variety-box">
+            <div class="variety-media">
+              <img src="images/music-style-1-49x49.png" alt="New-Wave" width="49" height="49"/>
+            </div>
+            <figcaption>
+              <span>New-Wave</span>
+              <p>Selecionamos o melhor da New-Wave para nossos ouvintes.</p>
+            </figcaption>
+          </figure>
+        </a>
+        <div class="button-container text-center">
+          <a href="https://open.spotify.com/track/3unmbb5oyjt5nifegkenx4" target="_blank">
+            <button class="button">Ouvir</button>
+          </a>
+        </div>
+      </div>
+
+      <!-- Gênero 3: Pop & Music -->
+      <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 wow fadeinleft">
+        <a class="variety-box-wrapper" href="https://open.spotify.com/track/0qwyryfdbgcyowaj5rmtal">
+          <figure class="variety-box">
+            <div class="variety-media">
+              <img src="images/music-style-2-47x56.png" alt="Pop & Music" width="47" height="56"/>
+            </div>
+            <figcaption>
+              <span>Pop & Music</span>
+              <p>Aproveite a melhor música pop, D&B e New-Wave na nossa rádio.</p>
+            </figcaption>
+          </figure>
+        </a>
+        <div class="button-container text-center">
+          <a href="https://open.spotify.com/track/0qwyryfdbgcyowaj5rmtal" target="_blank">
+            <button class="button">Ouvir</button>
+          </a>
+        </div>
+      </div>
+
+      <!-- Gênero 4: Sertanejo -->
+      <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 wow fadeinleft">
+        <a class="variety-box-wrapper" href="https://open.spotify.com/album/4j8p5z1ljawvhdgzaekvbo">
+          <figure class="variety-box">
+            <div class="variety-media">
+              <img src="images/music-style-3-37x46.png" alt="Sertanejo" width="37" height="46"/>
+            </div>
+            <figcaption>
+              <span>Sertanejo</span>
+              <p>Dezenas de novas faixas de sertanejo são transmitidas regularmente.</p>
+            </figcaption>
+          </figure>
+        </a>
+        <div class="button-container text-center">
+          <a href="https://open.spotify.com/album/4j8p5z1ljawvhdgzaekvbo" target="_blank">
+            <button class="button">Ouvir</button>
+          </a>
+        </div>
+      </div>
+
+      <!-- Gênero 5: Dance -->
+      <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 wow fadeinleft">
+        <a class="variety-box-wrapper" href="https://sndo.ffm.to/obbkkqo">
+          <figure class="variety-box">
+            <div class="variety-media">
+              <img src="images/music-style-4-53x45.png" alt="Dance" width="53" height="45"/>
+            </div>
+            <figcaption>
+              <span>Dance</span>
+              <p>Nossos DJs transmitem várias faixas de euro dance online.</p>
+            </figcaption>
+          </figure>
+        </a>
+        <div class="button-container text-center">
+          <a href="https://sndo.ffm.to/obbkkqo" target="_blank">
+            <button class="button">Ouvir</button>
+          </a>
+        </div>
+      </div>
+
+      <!-- Gênero 6: Rap -->
+      <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 wow fadeinleft">
+        <a class="variety-box-wrapper" href="https://open.spotify.com/album/2rnc62k4su8vdjelzwrf7n">
+          <figure class="variety-box">
+            <div class="variety-media">
+              <img src="images/music-style-5-51x48.png" alt="Rap" width="51" height="48"/>
+            </div>
+            <figcaption>
+              <span>Rap</span>
+              <p>Ouça a melhor seleção do rap nacional na Reggae Roots.</p>
+            </figcaption>
+          </figure>
+        </a>
+        <div class="button-container text-center">
+          <a href="https://open.spotify.com/album/2rnc62k4su8vdjelzwrf7n" target="_blank">
+            <button class="button">Ouvir</button>
+          </a>
+        </div>
+      </div>
+
+      <!-- Gênero 7: Pop -->
+      <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 wow fadeinleft">
+        <a class="variety-box-wrapper" href="https://sndo.ffm.to/jxrb58y">
+          <figure class="variety-box">
+            <div class="variety-media">
+              <img src="images/music-style-6-31x50.png" alt="Pop" width="31" height="50"/>
+            </div>
+            <figcaption>
+              <span>Pop</span>
+              <p>O melhor do pop você encontra aqui na Reggae Roots.</p>
+            </figcaption>
+          </figure>
+        </a>
+        <div class="button-container text-center">
+          <a href="https://sndo.ffm.to/jxrb58y" target="_blank">
+            <button class="button">Ouvir</button>
+          </a>
+        </div>
+      </div>
+
+      <!-- Gênero 8: Anos 80 -->
+      <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 wow fadeinleft">
+        <a class="variety-box-wrapper" href="https://sndo.ffm.to/a4vxdx9">
+          <figure class="variety-box">
+            <div class="variety-media">
+              <img src="images/music-style-7-25x63.png" alt="Anos 80" width="25" height="63"/>
+            </div>
+            <figcaption>
+              <span>Anos 80</span>
+              <p>Selecionamos o melhor dos anos 80 para nossos ouvintes.</p>
+            </figcaption>
+          </figure>
+        </a>
+        <div class="button-container text-center">
+          <a href="https://sndo.ffm.to/a4vxdx9" target="_blank">
+            <button class="button">Ouvir</button>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
     <!-- programação de programas de rádio -->
     <section class="section section-lg bg-gray-100">
       <div class="container text-center">
@@ -905,7 +1141,7 @@ video.addEventListener('click', () => {
     </section>
     <!-- botão musicas ineditas-->
     <section style="display: flex; justify-content: center; padding: 20px 0;">
-      <a href="/marketplace.html" target="_blank">
+      <a href="https://www.soundon.global/bio/reggaeroots" target="_blank">
         <button class="btn-container">
           <span class="text">músicas inéditas</span>
           <span class="icon-container">
@@ -981,47 +1217,24 @@ video.addEventListener('click', () => {
         </div>
       </div>
     </section>
-    <!-- call to action -->
-    <section class="section section-xs bg-primary-gradient">
-      <div class="container">
-        <div class="box-cta">
-          <div class="box-cta-inner">
-            <h3>disponível em nossa loja!</h3>
-          </div>
-          <a href="/marketplace.html" target="_blank">
-            <button class="button">
-              <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 36 24">
-                <path d="m18 0 8 12 10-8-4 20h4l0 4l10 8 8-12z"></path>
-              </svg>
-              saiba mais
-            </button>
-          </a>
-        </div>
+<!-- call to action -->
+<section class="section section-xs bg-primary-gradient">
+  <div class="container">
+    <div class="box-cta">
+      <div class="box-cta-inner">
+        <h3>disponível em nossa loja!</h3>
       </div>
-    </section>
-    <!-- seção para agendar visita -->
-    <section class="section section-xs bg-primary-gradient">
-      <div class="container">
-        <div class="box-cta">
-          <div class="box-cta-inner">
-            <h3>agende sua visita online!</h3>
-          </div>
-          <a href="/agendaonline.html" target="_blank" class="button-link">
-            <button class="button">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" viewbox="0 0 24 24" height="24" fill="none" class="svg-icon">
-                <g stroke-width="2" stroke-linecap="round" stroke="#fff">
-                  <rect y="5" x="4" width="16" rx="2" height="16"></rect>
-                  <path d="m8 3v4"></path>
-                  <path d="m16 3v4"></path>
-                  <path d="m4 11h16"></path>
-                </g>
-              </svg>
-              <span class="label">agendar visita</span>
-            </button>
-          </a>
-        </div>
-      </div>
-    </section>
+      <a href="https://pay.kiwify.com.br/2g3PxOK" target="_blank">
+        <button class="button">
+          <svg class="cartIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          </svg>
+          saiba mais
+        </button>
+      </a>
+    </div>
+  </div>
+</section>
+
     <br>
     <div class="video-container">
       <iframe src="https://www.youtube.com/embed/FwQfKhGX5IA?si=hXvMrIxtJ_91oQ92" 
@@ -1118,7 +1331,74 @@ function sendToWhatsApp(event) {
         <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span> <span>reggaeroots</span>. todos os direitos reservados. criado por: <a href="https://painelsummerside.com.br">summerside</a>
         </p>
       </div>
+        <!-- Vídeo sobreposto -->
+  <a href="https://reggaeroots.com.br/apk/android/app-release.apk" target="_blank" class="video-link">
+  <div class="video-overlay">
+    <video autoplay loop muted>
+      <source src="video/Vídeo_Merchandising.mp4" type="video/mp4">
+      Seu navegador não suporta vídeos.
+    </video>
+  </div>
+ 
     </footer>
+<style>
+  .video-overlay {
+    position: fixed;
+    bottom: 150px;
+    right: 60px;
+    width: 300px; /* Ajuste conforme necessário */
+    height: auto;
+    z-index: 9999;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    overflow: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease; /* Animação suave */
+  }
+
+  .video-overlay video {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+
+  /* Link estilo */
+  .video-link {
+    display: block;
+    text-decoration: none;
+  }
+
+  /* Inicialmente o vídeo é visível */
+  .video-overlay.visible {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  /* Quando o vídeo estiver escondido */
+  .video-overlay.hidden {
+    visibility: hidden;
+    opacity: 0;
+  }
+</style>
+<script>
+  let lastScrollTop = 0; // Posição do scroll anterior
+  const videoOverlay = document.querySelector('.video-overlay');
+
+  // Detecta o evento de rolagem
+  window.addEventListener('scroll', function() {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    // Se o usuário estiver rolando para baixo, esconde o vídeo
+    if (scrollTop > lastScrollTop) {
+      videoOverlay.classList.remove('visible');
+      videoOverlay.classList.add('hidden');
+    } else {
+      // Se o usuário rolar para cima, mostra o vídeo
+      videoOverlay.classList.remove('hidden');
+      videoOverlay.classList.add('visible');
+    }
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Para evitar valores negativos
+  });
+</script>
     </div>
     <!-- global mailform output-->
     <div class="snackbars" id="form-output-global"></div>
@@ -1261,5 +1541,9 @@ function sendToWhatsApp(event) {
     });
 </script>
 
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-59F8JSKD"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
     </body>
     </html>
