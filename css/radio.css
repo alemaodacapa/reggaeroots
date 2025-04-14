@@ -1,45 +1,90 @@
-#playerContainer {
-    width: 100%;
-    max-width: 100%;
-    height: 250px;
-    background-color: red;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
+.radio-player-wrapper {
+    background: #8b0000;
+    color: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    font-family: 'Segoe UI', sans-serif;
 }
 
-button {
-    background: white;
-    border: none;
-    padding: 10px 20px;
-    margin: 5px;
-    cursor: pointer;
+.radio-player-wrapper .player-status {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
     font-size: 16px;
 }
 
-#trackTitle {
-    color: white;
-    font-size: 18px;
-    margin-bottom: 10px;
+.radio-player-wrapper .status-light {
+    width: 14px;
+    height: 14px;
+    background: red;
+    border-radius: 50%;
+    margin-right: 10px;
+    transition: background 0.3s ease;
 }
 
-#volume {
-    width: 100%;
-    max-width: 200px;
-    margin-top: 10px;
+.radio-player-wrapper .status-light.playing {
+    background: limegreen;
 }
 
-#indicators {
+.radio-player-wrapper .controls {
     display: flex;
     gap: 10px;
+    justify-content: center;
+    margin: 15px 0;
+    flex-wrap: wrap;
+}
+
+.radio-player-wrapper .jp-btn {
+    background: #fff;
+    color: #8b0000;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.radio-player-wrapper .jp-btn:hover {
+    background: #ffe6e6;
+}
+
+.radio-player-wrapper .jp-time-rail,
+.radio-player-wrapper .jp-progress,
+.radio-player-wrapper .jp-seek-bar {
+    width: 100%;
+    height: 10px;
+    background: #300000;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+.radio-player-wrapper .jp-play-bar {
+    height: 100%;
+    background: limegreen;
+    width: 0%;
+}
+
+.radio-player-wrapper .jp-volume-bar {
+    height: 8px;
+    background: #aaa;
+    border-radius: 5px;
     margin-top: 10px;
 }
 
-.indicator {
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    background-color: gray;
+.radio-player-wrapper .jp-volume-bar-value {
+    height: 100%;
+    width: 50%;
+    background: #fff;
+}
+
+/* Estilo para o nome da música */
+.radio-player-wrapper .track-title {
+    color: white;      /* Cor branca */
+    font-size: 20px;   /* Ajuste o tamanho da fonte conforme necessário */
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;  /* Caso queira centralizar o nome */
 }
