@@ -62,256 +62,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-59F8JSKD');</script>
 <!-- End Google Tag Manager -->
-
-<style>
-    .ie-panel {
-        display: none;
-        background: #212121;
-        padding: 10px 0;
-        box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);
-        clear: both;
-        text-align: center;
-        position: relative;
-        z-index: 1;
-    }
-    html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {
-        display: block;
-    }
-
-    /* Botão centralizado com novo estilo */
-    .button-container {
-        display: flex;
-        justify-content: center;
-        margin-top: 15px;
-    }
-    .button-container button {
-        border: none;
-        border-radius: 20px;
-        background: linear-gradient(32deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
-        transition: all 1.5s ease;
-        font-family: 'Ropa Sans', sans-serif;
-        font-weight: bold;
-        letter-spacing: 2px; /* Espaçamento entre letras */
-        padding: 16px 36px; /* Mais espaço em cima, embaixo e laterais */
-        cursor: pointer;
-    }
-    .button-container button span {
-        display: inline-block;
-        padding: 20px 45px; /* Topo, base e laterais */
-        font-size: 17px;
-        letter-spacing: 2px;
-        border-radius: 20px;
-        background: #ffffff10;
-        backdrop-filter: blur(20px);
-        transition: 0.4s ease-in-out;
-        transition-property: color;
-        height: 100%;
-        width: 100%;
-    }
-    .button-container button span:hover {
-        backdrop-filter: blur(0px);
-        color: #ffffff;
-    }
-
-    /* Botão com ícone redondo */
-    .btn-container {
-        display: flex;
-        width: 220px;
-        height: fit-content;
-        background-color: #1d2129;
-        border-radius: 40px;
-        box-shadow: 0px 5px 10px #bebebe;
-        justify-content: space-between;
-        align-items: center;
-        border: none;
-        cursor: pointer;
-        padding: 16px; /* Mais espaço */
-    }
-    .icon-container {
-        width: 50px;
-        height: 50px;
-        background-color: #f59aff;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 50%;
-        border: 3px solid #1d2129;
-    }
-    .icon-container svg {
-        transition-duration: 1.5s;
-    }
-    .btn-container:hover .icon-container svg {
-        animation: arrow 1s linear infinite;
-    }
-    .text {
-        width: calc(220px - 60px);
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: white;
-        font-size: 1.1em;
-        letter-spacing: 2px; /* Letras espaçadas */
-        font-weight: bold;
-        padding: 10px 20px; /* Espaço ao redor do texto */
-    }
-    @keyframes arrow {
-        0% {
-            opacity: 0;
-            margin-left: 0px;
-        }
-        100% {
-            opacity: 1;
-            margin-left: 10px;
-        }
-    }
-
-    /* Vídeo responsivo */
-    .video-container {
-        position: relative;
-        width: 100%;
-        max-width: 1140px;
-        margin: auto;
-        aspect-ratio: 16 / 9;
-    }
-    .video-container iframe {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-    }
-
-    /* Navbar com hover verde claro */
-    .rd-navbar-nav .rd-nav-link {
-        color: white !important;
-        transition: color 0.3s ease;
-    }
-    .rd-navbar-nav .rd-nav-link:hover {
-        color: #90ee90 !important;
-    }
-
-    /* Estilos do player de rádio (mantido como solicitado) */
-    .radio-player-wrapper {
-        background: #8b0000;
-        color: white;
-        border-radius: 15px;
-        padding: 25px;
-        box-shadow: 0 0 15px rgba(0,0,0,0.3);
-        font-family: 'Segoe UI', sans-serif;
-    }
-    .radio-player-wrapper .player-status {
-        display: flex;
-        align-items: center;
-        margin-bottom: 15px;
-        font-size: 16px;
-    }
-    .radio-player-wrapper .status-light {
-        width: 14px;
-        height: 14px;
-        background: red;
-        border-radius: 50%;
-        margin-right: 10px;
-        transition: background 0.3s ease;
-    }
-    .radio-player-wrapper .status-light.playing {
-        background: limegreen;
-    }
-    .radio-player-wrapper .controls {
-        display: flex;
-        gap: 10px;
-        justify-content: center;
-        margin: 15px 0;
-        flex-wrap: wrap;
-    }
-    .radio-player-wrapper .jp-btn {
-        background: #fff;
-        color: #8b0000;
-        padding: 10px 15px;
-        border: none;
-        border-radius: 8px;
-        cursor: pointer;
-        font-weight: bold;
-        transition: 0.3s;
-    }
-    .radio-player-wrapper .jp-btn:hover {
-        background: #ffe6e6;
-    }
-    .radio-player-wrapper .jp-time-rail,
-    .radio-player-wrapper .jp-progress,
-    .radio-player-wrapper .jp-seek-bar {
-        width: 100%;
-        height: 10px;
-        background: #300000;
-        border-radius: 5px;
-        overflow: hidden;
-        margin: 10px 0;
-    }
-    .radio-player-wrapper .jp-play-bar {
-        height: 100%;
-        background: limegreen;
-        width: 0%;
-    }
-    .radio-player-wrapper .jp-volume-bar {
-        height: 8px;
-        background: #aaa;
-        border-radius: 5px;
-        margin-top: 10px;
-    }
-    .radio-player-wrapper .jp-volume-bar-value {
-        height: 100%;
-        width: 50%;
-        background: #fff;
-    }
-    .radio-player-wrapper .track-title {
-        color: white;
-        font-size: 18px;
-        font-weight: bold;
-        margin-bottom: 10px;
-    }
-    #track-artist {
-        transition: color 0.3s ease;
-    }
-    #track-artist:hover {
-        color: #00ff88;
-    }
-    
-    /* Shop Botton
-/* Botão call to action estilo Uiverse */
-.button {
-  width: 180px;
-  height: 40px;
-  background-image: linear-gradient(rgb(214, 202, 254), rgb(158, 129, 254));
-  border: none;
-  border-radius: 50px;
-  color: rgb(255, 255, 255);
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
-  cursor: pointer;
-  box-shadow: 1px 3px 0px rgb(139, 113, 255);
-  transition-duration: .3s;
-  font-family: 'Ropa Sans', sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+<script>document.addEventListener("DOMContentLoaded", function () {
+    const rdNavbar = new RdNavbar(document.querySelector('.rd-navbar'));
+    rdNavbar.init();
+});</script>
+<style>.ie-panel{display:none;background:#212121;padding:10px 0;box-shadow:3px 3px 5px 0 rgba(0,0,0,.3);clear:both;text-align:center;position:relative;z-index:1}html.ie-10 .ie-panel,html.lt-ie-10 .ie-panel{display:block}.button-container{display:flex;justify-content:center;margin-top:15px}.button-container button{border:none;border-radius:20px;background:linear-gradient(32deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);transition:all 1.5s ease;font-family:'Ropa Sans',sans-serif;font-weight:bold;letter-spacing:2px;padding:16px 36px;cursor:pointer}.button-container button span{display:inline-block;padding:20px 45px;font-size:17px;letter-spacing:2px;border-radius:20px;background:#ffffff10;backdrop-filter:blur(20px);transition:.4s ease-in-out;transition-property:color;height:100%;width:100%}.button-container button span:hover{backdrop-filter:blur(0px);color:#fff}.btn-container{display:flex;width:220px;height:fit-content;background-color:#1d2129;border-radius:40px;box-shadow:0 5px 10px #bebebe;justify-content:space-between;align-items:center;border:none;cursor:pointer;padding:16px}.icon-container{width:50px;height:50px;background-color:#f59aff;display:flex;align-items:center;justify-content:center;border-radius:50%;border:3px solid #1d2129}.icon-container svg{transition-duration:1.5s}.btn-container:hover .icon-container svg{animation:arrow 1s linear infinite}.text{width:calc(220px - 60px);height:100%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.1em;letter-spacing:2px;font-weight:bold;padding:10px 20px}@keyframes arrow{0%{opacity:0;margin-left:0}100%{opacity:1;margin-left:10px}}.video-container{position:relative;width:100%;max-width:1140px;margin:auto;aspect-ratio:16/9}.video-container iframe{width:100%;height:100%;position:absolute}.rd-navbar-nav .rd-nav-link{color:#fff!important;transition:color .3s ease}.rd-navbar-nav .rd-nav-link:hover{color:#90ee90!important}.radio-player-wrapper{background:#8b0000;color:#fff;border-radius:15px;padding:25px;box-shadow:0 0 15px rgba(0,0,0,.3);font-family:'Segoe UI',sans-serif}.radio-player-wrapper .player-status{display:flex;align-items:center;margin-bottom:15px;font-size:16px}.radio-player-wrapper .status-light{width:14px;height:14px;background:red;border-radius:50%;margin-right:10px;transition:background .3s ease}.radio-player-wrapper .status-light.playing{background:limegreen}.radio-player-wrapper .controls{display:flex;gap:10px;justify-content:center;margin:15px 0;flex-wrap:wrap}.radio-player-wrapper .jp-btn{background:#fff;color:#8b0000;padding:10px 15px;border:none;border-radius:8px;cursor:pointer;font-weight:bold;transition:.3s}.radio-player-wrapper .jp-btn:hover{background:#ffe6e6}.radio-player-wrapper .jp-time-rail,.radio-player-wrapper .jp-progress,.radio-player-wrapper .jp-seek-bar{width:100%;height:10px;background:#300000;border-radius:5px;overflow:hidden;margin:10px 0}.radio-player-wrapper .jp-play-bar{height:100%;background:limegreen;width:0%}.radio-player-wrapper .jp-volume-bar{height:8px;background:#aaa;border-radius:5px;margin-top:10px}.radio-player-wrapper .jp-volume-bar-value{height:100%;width:50%;background:#fff}.radio-player-wrapper .track-title{color:#fff;font-size:18px;font-weight:bold;margin-bottom:10px}#track-artist{transition:color .3s ease}#track-artist:hover{color:#00ff88}.button{width:180px;height:40px;background-image:linear-gradient(rgb(214,202,254),rgb(158,129,254));border:none;border-radius:50px;color:#fff;font-weight:600;display:flex;align-items:center;justify-content:center;gap:5px;cursor:pointer;box-shadow:1px 3px 0 rgb(139,113,255);transition-duration:.3s;font-family:'Ropa Sans',sans-serif;text-transform:uppercase;letter-spacing:1px}.cartIcon{width:14px;height:auto}.cartIcon path{fill:#fff}.button:active{transform:translate(2px,0);box-shadow:0 1px 0 rgb(139,113,255);padding-bottom:1px}.rd-navbar-nav-wrap {
+    display: none; /* Oculto por padrão */
 }
-
-.cartIcon {
-  width: 14px;
-  height: auto;
-}
-
-.cartIcon path {
-  fill: white;
-}
-
-.button:active {
-  transform: translate(2px ,0px);
-  box-shadow: 0px 1px 0px rgb(139, 113, 255);
-  padding-bottom: 1px;
-}
-
-</style>
+.rd-navbar-nav-wrap.active {
+    display: block; /* Exibido quando ativado */
+}</style>
 </head>
 <!-- Anúncio com vídeo local -->
 <div id="ad-popup" class="ad-popup">
@@ -632,8 +392,6 @@ video.addEventListener('click', () => {
     window.location.href = "https://social.x10.mx/donate.html";
 });
 </script>
-
-
   <body>
     <div class="preloader">
       <div class="preloader-body">
@@ -642,54 +400,70 @@ video.addEventListener('click', () => {
         </div>
       </div>
     </div>
-    <div class="page">
-      <!-- page header--><a class="banner banner-top" href="https://www.facebook.com/reggaerootsart" target="_blank"><img src="images/monstroid_02.jpg" alt="" height="0"/></a>
-      <header class="section page-header">
-        <!-- rd navbar-->
-        <div class="rd-navbar-wrap rd-navbar-absolute">
-          <nav class="rd-navbar rd-navbar-creative" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-static" data-xl-layout="rd-navbar-static" data-xl-device-layout="rd-navbar-static" data-lg-stick-up-offset="20px" data-xl-stick-up-offset="20px" data-xxl-stick-up-offset="20px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
-            <div class="rd-navbar-main-outer">
-              <div class="rd-navbar-main">
-                <!-- rd navbar panel-->
-                <div class="rd-navbar-panel">
-                  <!-- rd navbar toggle-->
-                  <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
-                  <!-- rd navbar brand-->
-                  <div class="rd-navbar-brand"><a class="brand" href="index.html"><img src="images/logo-302x44.png" alt="" width="151" height="22"/></a>
-                  </div>
+<body>
+  <div class="ie-panel">
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/">
+    <img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" 
+      alt="Você está usando um navegador desatualizado. Para uma experiência mais rápida e segura, atualize gratuitamente hoje.">
+    </a>
+  </div>
+  <div class="preloader">
+    <div class="preloader-body">
+      <div class="cssload-container">
+        <div class="cssload-speeding-wheel"></div>
+      </div>
+    </div>
+  </div>
+  <div class="page">
+  <!-- page header--><a class="banner banner-top" href="https://www.facebook.com/reggaerootsart" target="_blank"><img src="images/monstroid_02.jpg" alt="" height="0"/></a>
+  <header class="section page-header">
+  <!-- rd navbar-->
+    <!-- Cabeçalho da Página -->
+    <header class="section page-header">
+      <div class="rd-navbar-wrap rd-navbar-absolute">
+        <nav class="rd-navbar rd-navbar-creative" data-layout="rd-navbar-fixed">
+          <div class="rd-navbar-main-outer">
+            <div class="rd-navbar-main">
+              <div class="rd-navbar-panel">
+                <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap">
+                <span></span>
+                </button>
+                <div class="rd-navbar-brand">
+                  <a class="brand" href="index.html">
+                  <img src="images/logo-302x44.png" alt="" width="151" height="22"/>
+                  </a>
                 </div>
-                <div class="rd-navbar-main-element">
-                  <div class="rd-navbar-nav-wrap">
-                    <!-- rd navbar nav-->
-                    <ul class="rd-navbar-nav">
-                      <li class="rd-nav-item active"><a class="rd-nav-link" href="index.html">início</a>
-                      </li>
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="about.html">sobre</a>
-                      </li>
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="typography.html">tipografia</a>
-                      </li>
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="contacts.html">contato</a>
-                      </li>
-                    </ul>
-                  </div>
-                  <!-- rd navbar search-->
-                  <div class="rd-navbar-search">
-                    <button class="rd-navbar-search-toggle rd-navbar-fixed-element-1" data-rd-navbar-toggle=".rd-navbar-search"><span></span></button>
-                    <form class="rd-search" action="#" method="get">
-                      <div class="form-wrap">
-                        <label class="form-label" for="rd-navbar-search-form-input">busca</label>
-                        <input class="rd-navbar-search-form-input form-input" id="rd-navbar-search-form-input" type="text" name="s" autocomplete="off">
-                        <div class="rd-search-results-live" id="rd-search-results-live"></div>
-                      </div>
-                      <button class="rd-search-form-submit mdi mdi-magnify" type="submit"></button>
-                    </form>
-                  </div>
+              </div>
+              <div class="rd-navbar-main-element">
+                <div class="rd-navbar-nav-wrap">
+                  <ul class="rd-navbar-nav">
+                    <li class="rd-nav-item active"><a class="rd-nav-link" href="index.php">Início</a></li>
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="about.php">Sobre</a></li>
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="typography.html">Tipografia</a></li>
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="contacts.html">Contato</a></li>
+                  </ul>
+                </div>
+                <div class="rd-navbar-search">
+                  <button class="rd-navbar-search-toggle rd-navbar-fixed-element-1" 
+                    data-rd-navbar-toggle=".rd-navbar-search">
+                  <span></span>
+                  </button>
+                  <form class="rd-search" action="#" method="GET">
+                    <div class="form-wrap">
+                      <label class="form-label" for="rd-navbar-search-form-input">Buscar</label>
+                      <input class="rd-navbar-search-form-input form-input" 
+                        id="rd-navbar-search-form-input" type="text" name="s" autocomplete="off">
+                      <div class="rd-search-results-live" id="rd-search-results-live"></div>
+                    </div>
+                    <button class="rd-search-form-submit mdi mdi-magnify" type="submit"></button>
+                  </form>
                 </div>
               </div>
             </div>
-          </nav>
-        </div>
-      </header>
+          </div>
+        </nav>
+      </div>
+    </header>
       <!-- swiper-->
       <section class="section swiper-container swiper-slider swiper-slider-2" data-loop="false" data-autoplay="false" data-simulate-touch="false" data-slide-effect="fade">
         <div class="swiper-wrapper">
@@ -718,8 +492,6 @@ video.addEventListener('click', () => {
           </ul>
         </div>
       </section>
-</head>
-<body>
 <!-- Player de Rádio Premium --> 
 <section class="radio-premium" style="background: #121218; color: #fff; padding: 60px 20px; font-family: 'Segoe UI', sans-serif;">
   <div class="radio-box" style="max-width: 800px; margin: 0 auto; display: flex; flex-wrap: wrap; background: #1c1c28; border-radius: 20px; box-shadow: 0 0 25px rgba(0,0,0,0.6); overflow: hidden;">
