@@ -1326,5 +1326,8 @@
 					.trigger('resize');
 		}
 	});
-
+document.addEventListener("DOMContentLoaded", function () {
+    const rdNavbar = new RdNavbar(document.querySelector('.rd-navbar'));
+    rdNavbar.init();
+});
 }());
