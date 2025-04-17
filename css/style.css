@@ -15206,64 +15206,77 @@ img.mfp-img {
 		display: none;
 	}
 }
-/* From Uiverse.io by Yashwanthnaini */ 
-button {
- border: none;
- border-radius: 20px;
- background: linear-gradient(32deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
- transition: all 1.5s ease;
- font-family: 'Ropa Sans', sans-serif;
- font-weight: bold;
- letter-spacing: 0.05rem;
- padding: 0;
+@media (max-width: 768px) {
+    .rd-navbar-nav-wrap {
+        display: none; /* Oculta o menu por padrão */
+    }
+    .rd-navbar-nav-wrap.active {
+        display: block; /* Exibe o menu quando ativado */
+    }
 }
-
-button span {
- display: inline-block;
- padding: 15px 35px;
- font-size: 17px;
- border-radius: 20px;
- background: #ffffff10;
- backdrop-filter: blur(20px);
- transition: 0.4s ease-in-out;
- transition-property: color;
- height: 100%;
- width: 100%;
+@media (max-width: 768px) {
+  .rd-navbar-nav-wrap {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  }
+  
+  .rd-navbar-nav-wrap.active {
+    display: block;
+  }
+  
+  .rd-navbar-nav > li {
+    display: block;
+    width: 100%;
+  }
+  
+  .rd-navbar-nav > li > a {
+    display: block;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+  }
 }
-
-button span:hover {
- backdrop-filter: blur(0px);
- color: #ffffff;
-}
-/* From Uiverse.io by vinodjangid07 */ 
-.button {
-  width: 180px;
-  height: 40px;
-  background-image: linear-gradient(rgb(214, 202, 254), rgb(158, 129, 254));
-  border: none;
-  border-radius: 50px;
-  color: rgb(255, 255, 255);
-  font-weight: 600;
+/* Estilização geral do container principal */
+.rd-navbar-main {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
-  cursor: pointer;
-  box-shadow: 1px 3px 0px rgb(139, 113, 255);
-  transition-duration: .3s;
+  align-items: center; /* Alinha verticalmente os elementos */
+  justify-content: space-between; /* Adiciona espaço entre o menu e o logotipo */
 }
 
-.cartIcon {
-  width: 14px;
-  height: fit-content;
+/* Estilização do logotipo */
+.rd-navbar-brand {
+  margin-left: auto; /* Empurra o logotipo para a direita */
+  padding-left: 20px; /* Adiciona um espaçamento entre o menu e o logotipo */
 }
 
-.cartIcon path {
-  fill: white;
+/* Estilização do menu */
+.rd-navbar-nav-wrap {
+  display: flex;
+  align-items: center; /* Alinha os itens do menu verticalmente */
 }
 
-.button:active {
-  transform: translate(2px ,0px);
-  box-shadow: 0px 1px 0px rgb(139, 113, 255);
-  padding-bottom: 1px;
+/* Ajustes para telas menores */
+@media (max-width: 768px) {
+  .rd-navbar-main {
+    flex-direction: column; /* Coloca os elementos em coluna */
+    align-items: flex-start; /* Alinha os elementos à esquerda */
+  }
+
+  .rd-navbar-brand {
+    margin-left: 0; /* Remove o espaçamento automático no modo mobile */
+    padding-left: 0; /* Remove o espaçamento extra no modo mobile */
+    margin-top: 10px; /* Adiciona um espaçamento acima do logotipo */
+  }
+  .menu-button {
+    all: unset;
+    background: none;
+    padding: 0;
+    margin: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
 }
