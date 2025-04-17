@@ -438,7 +438,7 @@ video.addEventListener('click', () => {
                 <div class="rd-navbar-nav-wrap">
                   <ul class="rd-navbar-nav">
                     <li class="rd-nav-item active"><a class="rd-nav-link" href="index.php">Início</a></li>
-                    <li class="rd-nav-item"><a class="rd-nav-link" href="about.php">Sobre</a></li>
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="about.html">Sobre</a></li>
                     <li class="rd-nav-item"><a class="rd-nav-link" href="typography.html">Tipografia</a></li>
                     <li class="rd-nav-item"><a class="rd-nav-link" href="contacts.html">Contato</a></li>
                   </ul>
